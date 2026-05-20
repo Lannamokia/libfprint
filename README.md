@@ -236,6 +236,20 @@ If you previously adopted a template as `root`, delete that local link
 before adopting the same finger for a normal user. Otherwise duplicate
 detection may trip on the old local record.
 
+### 8. Windows adding a second finger should not break an existing Linux adoption
+
+If Windows later enrolls a new finger, the device-side template count
+will increase. That should not invalidate a Linux adopted link for an
+already-adopted finger.
+
+Expected behavior:
+
+- the existing Linux-adopted finger stays usable
+- the new Windows finger is simply unknown to Linux until it is adopted
+- `device_count_snapshot` may change, but it is diagnostic only
+- a Linux re-adopt is only needed if the originally adopted Windows finger
+  was deleted or re-enrolled on the Windows side
+
 ## License
 
 `Section 6` of the license states that for compiled works that use

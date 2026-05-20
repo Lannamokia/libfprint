@@ -269,6 +269,18 @@ auth    [success=3 default=ignore]    pam_fprintd.so max-tries=3 timeout=10
 - 驱动按 no-op 成功处理
 - 不再因为 `Print metadata is missing username` 中断重新录入
 
+### 9. Windows 后续新增另一枚指纹不应该影响 Linux 已 adopt 的旧指纹
+
+如果 Windows 后面又录入了一枚新的指纹，模组里的模板总数会增加，
+但这不应该让 Linux 里已经 adopt 过的那枚旧指纹失效。
+
+预期行为：
+
+- 已经在 Linux 里 adopt 的旧指纹继续可用
+- Windows 新增的那枚指纹在 Linux 里仍然是未知的，除非重新 adopt
+- `device_count_snapshot` 可能变化，但它只是诊断字段
+- 只有“原先那枚被 adopt 的 Windows 指纹被删掉或在 Windows 里重新录入”时，Linux 才需要重新 adopt
+
 ## 当前验证结果
 
 当前分支已经在真实设备上验证通过：
