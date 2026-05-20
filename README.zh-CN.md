@@ -207,6 +207,21 @@ auth    [success=3 default=ignore]    pam_fprintd.so max-tries=3 timeout=10
 - `list` 返回这层本地 adopted-link
 - `delete` 只删除本地 adopted-link 文件，不会向设备发送模板删除命令
 
+## 添加更多指纹
+
+如果你想让同一枚手指在 Windows 和 Linux 上都可用，正确流程是分两步：
+
+1. 先在 Windows 里录入这枚手指
+2. 再进入 Linux，把同一枚手指录入一次，让 Linux 去 adopt/link 同一份模组模板
+
+这是 shared-storage 设备的推荐用法。
+
+如果 Windows 后来删除了 Linux 已经 adopt 过的那枚指纹：
+
+- Linux 不应该崩溃
+- Linux 本地那条 link 会变成 stale
+- 后续认证应该变成 no-match，直到你删掉本地 stale link 并重新 adopt
+
 ## 已踩过的坑
 
 ### 1. `40 FF 12` 成功但 payload68 全零

@@ -169,6 +169,23 @@ appeared in Settings.
 
 This is by design.
 
+## Adding More Fingers
+
+If you want to use the same finger on both Windows and Linux, do it in two
+steps:
+
+1. Enroll the finger in Windows first.
+2. Boot Linux and enroll that finger again to adopt/link the same template.
+
+That is the supported flow for shared-storage devices.
+
+If Windows later deletes a finger that Linux has already adopted:
+
+- Linux should not crash
+- the local Linux link becomes stale
+- future verification should fail/no-match until you delete the stale local
+  link and adopt again
+
 ## Known Pitfalls
 
 ### 1. `40 FF 12` may succeed with all-zero payload
