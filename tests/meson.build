@@ -256,6 +256,11 @@ unit_tests = [
     'fpi-device',
     'fpi-ssm',
     'fpi-assembling',
+    'elan04moc-verify-fixed',
+    'elan04moc-enroll-fixed',
+    'elan04moc-list-fixed',
+    'elan04moc-delete-fixed',
+    'elan04moc-seed-print-fixed',
 ]
 
 if 'virtual_image' in drivers

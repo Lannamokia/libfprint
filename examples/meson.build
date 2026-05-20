@@ -6,6 +6,8 @@ examples = [
     'manage-prints',
     'verify',
     'clear-storage',
+    'device-info',
+    'open-close',
 ]
 
 foreach example: examples
