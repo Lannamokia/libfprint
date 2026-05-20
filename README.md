@@ -17,6 +17,8 @@
 [![Button Contribute]][Contribute]
 [![Button Contributors]][Contributors]
 
+[![Button Chinese]][ChineseReadme]
+
 </div>
 
 ## History
@@ -273,6 +275,7 @@ being shipped in an open source project.
 [Matrix]: https://matrix.to/#/#fprint:matrix.org
 
 [Contribute]: ./HACKING.md
+[ChineseReadme]: ./README.zh-CN.md
 [License]: ./COPYING
 
 [University Of Manchester]: https://www.manchester.ac.uk/
@@ -288,6 +291,7 @@ being shipped in an open source project.
 <!---------------------------------[ Buttons ]--------------------------------->
 
 [Button Documentation]: https://img.shields.io/badge/Documentation-04ACE6?style=for-the-badge&logoColor=white&logo=BookStack
+[Button Chinese]: https://img.shields.io/badge/%E4%B8%AD%E6%96%87_Readme-0A84FF?style=for-the-badge&logoColor=white&logo=ReadMe
 [Button Contributors]: https://img.shields.io/badge/Contributors-FF4F8B?style=for-the-badge&logoColor=white&logo=ActiGraph
 [Button Unsupported]: https://img.shields.io/badge/Unsupported_Devices-EF2D5E?style=for-the-badge&logoColor=white&logo=AdBlock
 [Button Contribute]: https://img.shields.io/badge/Contribute-66459B?style=for-the-badge&logoColor=white&logo=Git
